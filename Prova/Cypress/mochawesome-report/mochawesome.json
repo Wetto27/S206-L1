@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-18T22:07:49.770Z",
+    "end": "2025-06-18T22:07:57.348Z",
+    "duration": 7578,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "efac44d3-2bf7-48bb-b899-5b58ed424b7d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\ProvaCyperss.cy.js",
+      "file": "cypress\\e2e\\ProvaCyperss.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1532f2a4-a6c4-410a-8e25-dceaef7b61e5",
+          "title": "Prova Cypress",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Teste de login com sucesso",
+              "fullTitle": "Prova Cypress Teste de login com sucesso",
+              "timedOut": null,
+              "duration": 2619,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://the-internet.herokuapp.com/login');\ncy.get('#username').type('tomsmith');\ncy.get('#password').type('SuperSecretPassword!');\ncy.get('.radius').click();\ncy.get('.flash.success').should('contain', 'You logged into a secure area!');",
+              "err": {},
+              "uuid": "ce0ba243-19c3-4787-8f04-f081b7fbdf38",
+              "parentUUID": "1532f2a4-a6c4-410a-8e25-dceaef7b61e5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Teste de login com falha",
+              "fullTitle": "Prova Cypress Teste de login com falha",
+              "timedOut": null,
+              "duration": 1082,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://the-internet.herokuapp.com/login');\ncy.get('#username').type(nome);\ncy.get('#password').type('senhainvalida');\ncy.get('.radius').click();\ncy.get('.flash.error').should('contain', 'Your username is invalid!');",
+              "err": {},
+              "uuid": "3fd3dd45-4eb4-460b-8932-8849df4168cc",
+              "parentUUID": "1532f2a4-a6c4-410a-8e25-dceaef7b61e5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Teste de logout com sucesso",
+              "fullTitle": "Prova Cypress Teste de logout com sucesso",
+              "timedOut": null,
+              "duration": 1539,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://the-internet.herokuapp.com/login');\ncy.get('#username').type('tomsmith');\ncy.get('#password').type('SuperSecretPassword!');\ncy.get('.radius').click();\ncy.get('.icon-2x.icon-signout').click();\ncy.get('#flash').should('contain', 'You logged out of the secure area!');",
+              "err": {},
+              "uuid": "95195873-eb51-401f-8d2a-c3e94dd5ee23",
+              "parentUUID": "1532f2a4-a6c4-410a-8e25-dceaef7b61e5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ce0ba243-19c3-4787-8f04-f081b7fbdf38",
+            "3fd3dd45-4eb4-460b-8932-8849df4168cc",
+            "95195873-eb51-401f-8d2a-c3e94dd5ee23"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5240,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
